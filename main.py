@@ -1,13 +1,3 @@
-"""
-Created on Mon Nov  8 16:51:50 2021
-
-@author: RafaĹ Biedrzycki
-Kodu tego mogą używać moi studenci na ćwiczeniach z przedmiotu WstÄp do Sztucznej Inteligencji.
-Kod ten powstał aby przyspieszyć i ułatwić pracę studentów, aby mogli skupić się na algorytmach sztucznej inteligencji.
-Kod nie jest wzorem dobrej jakoĹci programowania w Pythonie, nie jest również wzorem programowania obiektowego, moĹźe zawieraÄ bĹÄdy.
-
-Nie ma obowiązku używania tego kodu.
-"""
 import matplotlib.pyplot as plt
 import numpy as np
 
