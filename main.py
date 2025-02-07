@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-p = [1, 7]
 np.random.seed(1)
 
 L_BOUND = -5
@@ -9,30 +8,26 @@ U_BOUND = 5
 
 
 def q(x):
-    return np.sin(x * np.sqrt(p[0] + 1)) + np.cos(x * np.sqrt(p[1] + 1))
+    return np.sin(x * np.sqrt(2)) + np.cos(x * np.sqrt(8))
 
 
 x = np.linspace(L_BOUND, U_BOUND, 300)
 y = q(x)
 
 
-# f logistyczna jako przykład sigmoidalnej
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
 
 
-# pochodna fun. 'sigmoid'
 def d_sigmoid(x):
     s = 1 / (1 + np.exp(-x))
     return s * (1 - s)
 
 
-# f. straty
 def nloss(y_out, y):
     return (y_out - y) ** 2
 
 
-# pochodna f. straty
 def d_nloss(y_out: float, y: float):
     return 2 * (y_out - y)
 
@@ -58,7 +53,6 @@ class DlNet:
         self.output_weights: np.array = np.zeros(shape=(1, self.HIDDEN_L_SIZE))
         self.output_bias: np.array = np.zeros(shape=(1, 1))
 
-        # nazwy zmiennych pochodzą z notacji z wykładu
         self.y1: np.array = np.zeros(shape=(self.HIDDEN_L_SIZE, 1))
         self.s: np.array = np.zeros(shape=(self.HIDDEN_L_SIZE, 1))
 
